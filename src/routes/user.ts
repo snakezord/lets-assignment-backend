@@ -27,7 +27,7 @@ router
   .get('/users', async (_, res) => {
     try {
       const users = await User.find().populate('movie');
-      res.status(201).send(users);
+      res.status(200).send(users);
     } catch (error: any) {
       res.status(400).send({
         error: error.message,
